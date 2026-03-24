@@ -39,7 +39,6 @@ if "logged_in" not in st.session_state:
 if not st.session_state.logged_in:
     # 这里是门外的景象
     st.title("🔒 欢迎登录：工程款项记录系统")
-    pip install streamlit
     # 画一个登录框
     with st.form("login_form"):
         username = st.text_input("账号")
