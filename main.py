@@ -15,8 +15,6 @@ if not firebase_admin._apps:
     firebase_admin.initialize_app(cred)
 db = firestore.client()
 
-# ...(后面的代码保持不变，不用动)...
-
 # 💡 魔法：如果云端还没有任何用户，自动建一个“老板账号”方便你第一次登录
 users_ref = db.collection("users").limit(1).get()
 if len(users_ref) == 0:
